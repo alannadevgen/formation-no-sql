@@ -1,0 +1,40 @@
+\documentclass[addpoints,answers]{exam}
+\usepackage{package}
+\usepackage{amsmath}
+\usepackage{lastpage}
+
+\renewcommand{\thequestion}{\Roman{question}}
+
+\begin{document}
+	
+	\setcounter{page}{1}
+	\pagenumbering{arabic}
+	
+	\include{titlepage}
+	
+	\begin{questions}
+		
+		\section*{QCM}
+
+		\question[1] Bob développe une application de réseau social où les utilisateurs peuvent se connecter et interagir avec d'autres utilisateurs ainsi qu'avec du contenu généré par les utilisateurs. Quelle base de données NoSQL serait la plus adaptée pour gérer ces relations complexes ?
+		\begin{checkboxes}
+			\choice Amazon DocumentDB pour stocker des informations d'utilisateur comme les préférences de contenu.
+			\CorrectChoice Neo4j pour sa capacité à modéliser efficacement les réseaux sociaux et les relations complexes entre utilisateurs et contenu.
+			\choice Amazon DynamoDB pour la rapidité d'accès aux données spécifiques comme les informations de profil utilisateur.
+			\choice MongoDB pour gérer les flux d'activité des utilisateurs.
+		\end{checkboxes}
+				
+		\question[1] Charlie a une application de jeu en ligne massivement multijoueur où des milliers de joueurs interagissent simultanément dans un monde virtuel. Quelle base de données NoSQL serait la plus adaptée pour gérer l'état du monde virtuel et les interactions des joueurs ?
+		\begin{checkboxes}
+			\choice Memcached pour la rapidité d'accès aux données spécifiques comme les scores des joueurs.
+			\choice Neo4j pour modéliser les relations entre les joueurs et les alliances.
+			\choice Cassandra pour gérer efficacement les données de connexion des joueurs.
+			\CorrectChoice Google Firestore pour stocker des entités de jeu complexes comme les personnages avec des attributs variés et évolutifs.
+		\end{checkboxes}
+		
+		
+		\section*{Question ouverte}
+		
+	\end{questions}
+	
+\end{document}

@@ -1,0 +1,39 @@
+\documentclass[addpoints,answers]{exam}
+\usepackage{package}
+\usepackage{amsmath}
+\usepackage{lastpage}
+
+\renewcommand{\thequestion}{\Alph{question}}
+
+\begin{document}
+	
+	\setcounter{page}{1}
+	\pagenumbering{arabic}
+	
+	\include{titlepage}
+	
+	\begin{questions}
+		
+		\section*{QCM}
+		
+		\question[1] Sophia gère une plateforme de streaming vidéo où des millions d'utilisateurs regardent des vidéos en continu. Quelle base de données NoSQL serait la plus appropriée pour gérer le catalogue de vidéos et les préférences des utilisateurs ?
+		\begin{checkboxes}
+			\choice Clé-Valeur pour la rapidité d'accès aux informations de visionnage des utilisateurs.
+			\CorrectChoice Amazon DynamoDB pour gérer les vidéos avec des attributs complexes comme les acteurs, les genres et les recommandations personnalisées.
+			\choice Neo4j pour modéliser les relations entre les utilisateurs et les vidéos visionnées.
+			\choice Google Bigtable pour gérer efficacement les métadonnées des vidéos.
+		\end{checkboxes}
+		
+		\question[1] Emma est en train de développer une plateforme de commerce électronique qui doit pouvoir traiter des milliards de commandes en une fraction de seconde, surtout lors des périodes de pointe comme les vacances. La redondance des données et la capacité à faire face à la perte de nœuds de stockage sont essentielles pour assurer une disponibilité continue du service. Quelle base de données NoSQL serait la plus adaptée pour répondre à ces exigences spécifiques ?
+		\begin{checkboxes}
+			\choice MongoDB pour sa flexibilité du schéma et sa capacité à gérer des données semi-structurées à grande échelle.
+			\choice Neo4j pour modéliser efficacement les relations entre les produits, les utilisateurs et les commandes.
+			\CorrectChoice Apache HBase pour sa capacité à gérer de vastes volumes de données non structurées avec une faible latence et une grande scalabilité.
+			\choice Riak pour sa capacité à offrir une haute disponibilité et une résilience élevée face aux pannes tout en gérant des données distribuées.
+		\end{checkboxes}
+		
+		\section*{Question ouverte}
+		
+	\end{questions}
+	
+\end{document}
