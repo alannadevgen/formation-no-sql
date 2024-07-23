@@ -1,0 +1,514 @@
+% \documentclass[12pt,a4paper,addpoints]{exam}
+\documentclass[12pt,a4paper,addpoints,answers]{exam} 
+
+% Police / caractères / langue
+\usepackage[OT1]{fontenc} % police
+\usepackage{sansmathfonts} % Set sans-serif font (with small caps option and math option)
+\renewcommand*\familydefault{\sfdefault} % Apply font throughout the whole document. Only if the base font of the document is to be sans serif
+\usepackage[french, english]{babel} % pour le français
+\usepackage[utf8]{inputenc} % pour les caractères accentués ou package ‘inputenx’
+
+\usepackage{minted}
+\usepackage{slantsc} % access different-shaped small-caps fonts
+\usepackage{tgbonum} % changer la police
+\usepackage{graphicx}
+\usepackage[a4paper, top=2.5cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+
+\usepackage{amsmath} 
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{fancybox} % for shadow boxes
+
+\checkboxchar{$\square$}
+\checkedchar{$\blacksquare$}
+\bonuspointpoints{point bonus}{point bonus}
+
+\newcommand{\currentscolaryear}{2024 - 2025}
+
+\pagestyle{headandfoot}
+\runningheadrule
+\firstpageheader{IUT Rives de Seine\\Alanna \textsc{Devlin Génin}}{}{BUT Science des Données\\Parcours VCOD}
+\runningheader{BUT SD} {Bases de données NoSQL} {\currentscolaryear} \firstpagefooter{}{}{}
+\runningfooter{}{\thepage/\numpages}{}
+
+\usepackage{parskip}
+\setlength\linefillheight{10cm}
+\setlength\linefillthickness{0.5pt}
+
+% \renewcommand{\thequestion}{\Arabic{question}}
+% \renewcommand{\thequestion}{\Roman{question}}
+% \renewcommand{\thequestion}{\Alph{question}}
+\usepackage{MnSymbol,wasysym}
+
+\begin{document}
+	
+	\vspace*{2cm}
+	
+	\begin{center}
+		\shadowbox{\textbf{Bases de données NoSQL}}
+		
+		Durée : 30 minutes
+		
+		\textit{Aucun document ou matériel électronique n’est autorisé.}
+		
+		\textit{Le barème est donné à titre indicatif.}
+	\end{center}
+	
+	\vspace{1.5cm}
+	\makebox[\textwidth]{\bf Prénom \textsc{Nom}\enspace\hrulefill}
+	\vspace{1.5cm}
+	
+	
+	\begin{center}
+		Cet examen comporte \numquestions\ questions, pour un total de \numpoints\ points et \numbonuspoints\ points bonus. L'examen contient \numpages\ pages, avant de commencer, veuillez vérifier que vous avez l'examen dans sa totalité.
+	\end{center}
+	
+	\vspace{1.5cm}
+	
+	\textbf{QCM}
+	
+	La première partie de l'examen est un questionnaire à choix multiples, les questions peuvent avoir une ou plusieurs bonnes réponses. Les questions sont indépendantes les uns des autres. Renseigner votre réponse en noircissant la case correspondante.
+	
+	\vspace{1.5cm}
+	
+	\textbf{Questions ouvertes}
+	
+	La seconde partie de l'examen est composé de question(s) ouverte(s), répondez directement sur le sujet. Si vous n'avez pas assez de place, vous pouvez écrire au recto de la dernière page.
+	
+	\vspace{1.5cm}
+	
+	\begin{center}
+		Bon courage ! \blacksmiley{}
+	\end{center}
+	
+	\newpage
+	
+	\begin{center}
+		\multicolumngradetable{2}
+	\end{center}
+
+	\newpage
+
+	\begin{minted}{c}
+		#include <stdio.h>
+		int main() {
+		   printf("Hello, World!"); /*printf() outputs the quoted string*/
+		   return 0;
+		}
+		\end{minted}
+	
+	% \setlength\linefillheight{10cm}
+	\begin{questions}
+		
+		\section*{QCM}
+		
+		\question[\half] Qu'est-ce qu'une base de données NoSQL ?
+		\begin{checkboxes}
+			\choice Une base de données relationnelle
+			\CorrectChoice Une base de données non relationnelle
+			\choice Une base de données en lecture seule
+			\choice Une base de données exclusivement utilisée par les grandes entreprises
+		\end{checkboxes}
+		
+		\question[\half] Parmi les bases de données ci-dessous, laquelle est une base de données NoSQL ?
+		\begin{checkboxes}
+			\CorrectChoice Redis
+			\choice MySQL
+			\choice PostgreSQL
+			\choice Oracle
+		\end{checkboxes}
+		
+		\question[\half] Quels sont les quatre principaux types de bases de données NoSQL ?
+		\begin{checkboxes}
+			\choice Colonne, Clé-Valeur, XML, Graph
+			\choice Clé-Valeur, Table, Document, SQL
+			\choice JSON, Colonne, Document, Graph
+			\CorrectChoice Clé-Valeur, Colonne, Document, Graph
+		\end{checkboxes}
+		
+		\question[\half] Quel type de base de données NoSQL est le mieux adapté pour stocker des données hiérarchiques ?
+		\begin{checkboxes}
+			\choice Clé-Valeur
+			\choice Colonne
+			\CorrectChoice Graph
+			\choice Document
+		\end{checkboxes}
+		
+		\question[\half] Dans une base de données de type document, sous quelle forme les données sont-elles stockées ?
+		\begin{checkboxes}
+			\choice Tables 
+			\choice Clé-valeur
+			\CorrectChoice JSON ou BSON
+			\choice Colonnes
+		\end{checkboxes}
+		
+		\question[1] Quelle(s) est (sont) la (les) caractéristique(s) principale(s) des bases de données NoSQL ?
+		\begin{checkboxes}
+			\CorrectChoice Propriétés BASE
+			\choice Transactions ACID
+			\choice Langage SQL
+			\choice ODBC
+		\end{checkboxes}
+		
+		\question[1] Quelle(s) base(s) de données NoSQL utilise(nt) une structure en tableau de hachage distribué ?
+		\begin{checkboxes}
+			\choice Cassandra
+			\choice MongoDB
+			\CorrectChoice Redis
+			\choice Neo4j
+		\end{checkboxes}
+		
+		\question[\half] De quel type de base de données NoSQL est Cassandra ?
+		\begin{checkboxes}
+			\choice Clé-Valeur
+			\CorrectChoice Colonne
+			\choice Graph
+			\choice Document
+		\end{checkboxes}
+		
+		\question[\half] Quelle base de données NoSQL est conçue pour les requêtes de graphe complexe ?
+		\begin{checkboxes}
+			\choice Redis
+			\choice Cassandra
+			\CorrectChoice Neo4j
+			\choice MongoDB
+		\end{checkboxes}
+		
+		\question[1] Quel(s) mécanisme(s) est (sont) souvent utilisé(s) pour assurer la disponibilité et la partition tolérance dans les bases de données NoSQL ?
+		\begin{checkboxes}
+			\choice Indexation
+			\CorrectChoice Sharding
+			\choice Joins
+			\choice Transactions
+		\end{checkboxes}
+		
+		\question[1] Dans une base de données NoSQL de type clé-valeur, que représente la \textbf{clé} ?
+		\begin{checkboxes}
+			\choice Une table entière
+			\choice Une colonne de la base de données
+			\CorrectChoice Un identifiant unique pour accéder à la valeur
+			\choice Une fonction d'indexation
+		\end{checkboxes}
+		
+		\question[1] Quelle est une limitation courante des bases de données NoSQL comparée aux bases de données SQL traditionnelles ?
+		\begin{checkboxes}
+			\choice Flexibilité du schéma
+			\choice Disponibilité
+			\choice Scalabilité
+			\CorrectChoice Gestion des transactions complexes
+		\end{checkboxes}
+		
+		\question[1] Comment les bases de données NoSQL assurent-elles généralement la consistance des données ?
+		\begin{checkboxes}
+			\choice Par des transactions ACID
+			\choice Par des triggers
+			\CorrectChoice Par des mécanismes de versionnage et de synchronisation
+			\choice Par des procédures stockées
+		\end{checkboxes}
+		
+		\question[1] Quel type de base de données NoSQL est idéal pour les systèmes de recommandation comme ceux utilisés par les réseaux sociaux ?
+		\begin{checkboxes}
+			\choice Colonne
+			\choice Clé-Valeur
+			\CorrectChoice Graph
+			\choice Document
+		\end{checkboxes}
+		
+		\question[1] Qu'est-ce que la partition tolérance dans le contexte des bases de données NoSQL ?
+		\begin{checkboxes}
+			\CorrectChoice La capacité à supporter une perte de communication entre les nœuds sans perdre de données
+			\choice La capacité à exécuter des transactions ACID
+			\choice La capacité à exécuter des requêtes SQL complexes
+			\choice La capacité à maintenir des connexions simultanées
+		\end{checkboxes}
+		
+		\question[1] En utilisant MongoDB, comment créer un index pour améliorer les performances des requêtes sur le champ name dans une collection users ?
+		\begin{checkboxes}
+			\choice \texttt{db.users.ensureIndex(\{name:1\})}
+			\CorrectChoice \texttt{db.users.createIndex(\{name:1\})}
+			\choice \texttt{db.users.index(\{name:1\})}
+			\choice \texttt{db.users.addIndex(\{name:1\})}
+		\end{checkboxes}
+		
+		\question[1] Quelle technique est souvent utilisée dans Redis pour gérer les expirations de clés et optimiser la mémoire ?
+		\begin{checkboxes}
+			\CorrectChoice Time to Live
+			\choice Lazy deletion
+			\choice Garbage collection
+			\choice Snapshotting
+		\end{checkboxes}
+		
+		\question[1] Quel est le langage de requêtage utilisé par Neo4j ?
+		\begin{checkboxes}
+			\choice SQL
+			\CorrectChoice Cypher
+			\choice CQL
+			\choice Gremlin
+		\end{checkboxes}
+		
+		\question[1] Comment les bases de données NoSQL gèrent-elles généralement les mises à jour simultanées pour éviter les conflits ?
+		\begin{checkboxes}
+			\choice  En utilisant des verrous (locks) sur les enregistrements
+			\choice En utilisant des transactions ACID
+			\CorrectChoice En appliquant des techniques de versionnage et de contrôle d'accès optimiste 
+			\choice En appliquant des procédures stockées
+		\end{checkboxes}
+		
+		\question[1] Dans MongoDB, quelle stratégie de sharding permet de distribuer les données de manière uniforme pour équilibrer la charge entre les nœuds ?
+		\begin{checkboxes}
+			\choice Sharding par plage
+			\CorrectChoice Sharding par hash
+			\choice Sharding par liste
+			\choice Sharding par partition
+		\end{checkboxes}
+		
+		\question[1] Comment Cassandra assure-t-elle la tolérance aux pannes lorsqu'un nœud devient indisponible ?
+		\begin{checkboxes}
+			\choice En utilisant le partitionnement par hachage
+			\choice En utilisant des transactions distribuées
+			\CorrectChoice En répliquant les données sur plusieurs nœuds avec une stratégie de réplication
+			\choice En stockant toutes les données sur un seul nœud principal
+		\end{checkboxes}
+		
+		\question[1] Quelle méthode utilise Redis pour persister les données en mémoire sur le disque ?
+		\begin{checkboxes}
+			\choice Logging
+			\choice Redis Database Folder
+			\choice Write-ahead logging
+			\choice Checkpointing
+			\CorrectChoice Append-Only File et Redis Database File
+		\end{checkboxes}
+		
+		\question[1] Dans un système de bases de données NoSQL distribuées, quel est l'impact du théorème CAP sur le design des systèmes ?
+		\begin{checkboxes}
+			\choice Il permet de choisir entre consistance et disponibilité tout en garantissant la tolérance au partitionnement.
+			\choice Il impose de choisir entre disponibilité et tolérance au partitionnement, mais garantit toujours la consistance.
+			\choice Il force les systèmes à sacrifier la tolérance au partitionnement pour obtenir consistance et disponibilité.
+			\CorrectChoice Il impose des compromis entre consistance, disponibilité, et tolérance au partitionnement, mais ne permet pas d'obtenir les trois propriétés simultanément.
+		\end{checkboxes}
+		
+		\question[1] Comment fonctionne la réplication maître-esclave dans une base de données NoSQL comme MongoDB ?
+		\begin{checkboxes}
+			\choice Les données sont écrites sur les esclaves et répliquées de manière synchrone sur le maître.
+			\CorrectChoice Les données sont écrites sur le maître et répliquées de manière asynchrone sur les esclaves.
+			\choice Les données sont écrites sur les esclaves et répliquées de manière asynchrone sur le maître.
+			\choice Les données sont écrites sur le maître et répliquées de manière synchrone sur les esclaves.
+		\end{checkboxes}
+		
+		\question[1] Quel(s) avantage(s) majeur(s) offre le modèle de données orienté colonnes ?
+		\begin{checkboxes}
+			\choice Meilleure gestion des relations complexes entre les données.
+			\CorrectChoice Meilleure performance pour les écritures massives et les lectures par lot.
+			\choice Meilleure compatibilité avec les systèmes SQL traditionnels.
+			\choice Simplification du schéma de la base de données.
+		\end{checkboxes}
+		
+		\question[1] Dans une base de données orientée document, comment est-il possible de garantir l'atomicité des opérations sur plusieurs documents ?
+		\begin{checkboxes}
+			\choice  En utilisant des transactions ACID sur plusieurs documents.
+			\choice En utilisant des transactions multi-documents.
+			\choice En utilisant des techniques de contrôle de version et des verrous de ligne.
+			\CorrectChoice Cela n'est généralement pas possible ; les opérations sont atomiques au niveau du document unique.
+		\end{checkboxes}
+		
+		\question[1] Quel est le rôle des réplicas dans une base de données NoSQL distribuée ?
+		\begin{checkboxes}
+			\CorrectChoice Assurer la redondance des données et améliorer la tolérance aux pannes.
+			\choice Réduire la latence des requêtes en mettant en cache les réponses.
+			\choice Améliorer la performance des écritures en les distribuant sur plusieurs nœuds.
+			\choice Simplifier la gestion des transactions distribuées.
+		\end{checkboxes}
+		
+		\bonusquestion[1] Quelle est une des principales différences entre les bases de données NoSQL et les bases de données NewSQL ?
+		\begin{checkboxes}
+			\choice NoSQL est orienté document tandis que NewSQL est orienté colonne.
+			\CorrectChoice NoSQL se concentre sur la scalabilité horizontale tandis que NewSQL vise à combiner la scalabilité avec les propriétés ACID des bases de données relationnelles.
+			\choice NoSQL utilise SQL pour les requêtes tandis que NewSQL utilise des API personnalisées.
+			\choice NoSQL ne supporte pas la scalabilité horizontale, contrairement à NewSQL.
+		\end{checkboxes}
+		
+		\question[1\half] Quel(s) facteur(s) doit (doivent) être pris en compte pour choisir entre une base de données NoSQL de type Document et une base de données NoSQL de type Graph ?
+		\begin{checkboxes}
+			\CorrectChoice La nature des relations entre les données
+			\choice La taille et la complexité des documents
+			\CorrectChoice La nécessité de requêtes complexes et de traversées rapides des relations
+			\CorrectChoice La fréquence des mises à jour des documents
+		\end{checkboxes}
+		
+		\question[1\half] Quel(s) est (sont) le(s) mécanisme(s) utilisé(s) par les bases de données NoSQL pour assurer la disponibilité et la partition tolérance dans un environnement distribué ?
+		\begin{checkboxes}
+			\CorrectChoice Réplication des données
+			\CorrectChoice Sharding
+			\choice Transactions ACID strictes
+			\CorrectChoice Cohérence éventuelle
+		\end{checkboxes}
+		
+		\question[1\half] Lors de la modélisation des données dans une base de données NoSQL, quelle(s) est (sont) la (les) meilleure(s) pratique(s) pour optimiser les performances des requêtes ?
+		\begin{checkboxes}
+			\CorrectChoice Utilisation de structures de données imbriquées pour réduire le nombre de requêtes
+			\CorrectChoice Création d'index sur les champs fréquemment interrogés
+			\choice Normalisation des données pour minimiser la redondance
+			\CorrectChoice Dé-normalisation des données pour réduire le besoin de jointures complexes
+		\end{checkboxes}
+		
+		\question[1] Que signifient les initiales du théorème CAP ?
+		\begin{checkboxes}
+			\choice Complexity Accuracy Performance
+			\choice Centralized Access Protocol
+			\CorrectChoice Consistency Availability Partition Tolerance
+			\choice Consistency Availability Performance
+			\choice Conformity Availability Partition Tolerance
+		\end{checkboxes}
+		
+		\question[1] Quel(s) est (sont) le(s) principal(ux) compromi(s) à considérer lors de l'implémentation de la cohérence éventuelle dans une base de données NoSQL ?
+		\begin{checkboxes}
+			\CorrectChoice Temps de latence des mises à jour
+			\choice Facilité de mise à jour des transactions complexes
+			\CorrectChoice Disponibilité du système en cas de partition réseau
+			\choice Simplicité de la récupération des données cohérentes
+		\end{checkboxes}
+		
+		\question[1] Dans quel(s) scénario(s) spécifique(s) l'utilisation de Neo4j serait-elle plus avantageuse que l'utilisation de MongoDB ?
+		\begin{checkboxes}
+			\CorrectChoice Analyse de réseaux sociaux pour découvrir des relations complexes
+			\choice Gestion de données hiérarchiques avec de nombreux niveaux imbriqués
+			\CorrectChoice Application nécessitant des recommandations personnalisées basées sur les connexions entre utilisateurs
+			\choice Stockage de gros volumes de documents JSON semi-structurés
+		\end{checkboxes}
+		
+		\question[1] Quel(s) est (sont) le(s) avantage(s) des bases de données NoSQL par rapport aux bases de données relationnelles traditionnelles ?
+		\begin{checkboxes}
+			\CorrectChoice Meilleure scalabilité horizontale
+			\CorrectChoice Flexibilité du schéma
+			\CorrectChoice Performance améliorée pour certaines opérations
+			\CorrectChoice Traitement rapide de grandes quantités de données distribuées
+		\end{checkboxes}
+		
+		\question[\half] Quels types de bases de données NoSQL existent ?
+		\begin{checkboxes}
+			\CorrectChoice Clé-Valeur
+			\CorrectChoice Document
+			\CorrectChoice Graph
+			\choice Relationnel
+			\CorrectChoice Orienté colonnes
+		\end{checkboxes}
+		
+		\question[1] Quel(s) est (sont) le(s) défi(s) courant(s) de la gestion des bases de données NoSQL ?
+		\begin{checkboxes}
+			\CorrectChoice Gestion de la cohérence des données
+			\CorrectChoice Modélisation des données sans schéma fixe
+			\CorrectChoice Support limité pour les transactions complexes
+			\CorrectChoice Sécurité des données
+		\end{checkboxes}
+		
+		\question[1] Quel(s) mécanisme(s) les bases de données NoSQL utilise(nt)-elles pour assurer la scalabilité ?
+		\begin{checkboxes}
+			\CorrectChoice Sharding
+			\CorrectChoice Réplication
+			\CorrectChoice Partitionnement
+			\CorrectChoice Balancement de charge
+		\end{checkboxes}
+		
+		\question[1] Quels sont les cas d'utilisation appropriés pour les bases de données NoSQL ?
+		\begin{checkboxes}
+			\CorrectChoice Applications nécessitant une grande scalabilité horizontale
+			\CorrectChoice Systèmes de gestion de contenu
+			\CorrectChoice Réseaux sociaux
+			\CorrectChoice Big Data
+		\end{checkboxes}
+		
+		\question[1] Alice a une application de commerce électronique où elle doit gérer des produits avec des attributs variés comme le nom, la description, les prix fluctuants et les stocks en temps réel. Quelle base de données NoSQL serait la plus appropriée pour Alice ?
+		\begin{checkboxes}
+			\CorrectChoice MongoDB pour sa flexibilité du schéma et sa capacité à gérer des données semi-structurées comme les variations de prix.
+			\choice Redis pour la rapidité d'accès aux données spécifiques comme les niveaux de stock.
+			\choice Neo4j pour modéliser les relations entre les produits et les utilisateurs.
+			\choice Cassandra pour gérer efficacement les statistiques de vente.
+		\end{checkboxes}
+		
+		\question[1] Bob développe une application de réseau social où les utilisateurs peuvent se connecter et interagir avec d'autres utilisateurs ainsi qu'avec du contenu généré par les utilisateurs. Quelle base de données NoSQL serait la plus adaptée pour gérer ces relations complexes ?
+		\begin{checkboxes}
+			\choice Amazon DocumentDB pour stocker des informations d'utilisateur comme les préférences de contenu.
+			\CorrectChoice Neo4j pour sa capacité à modéliser efficacement les réseaux sociaux et les relations complexes entre utilisateurs et contenu.
+			\choice Amazon DynamoDB pour la rapidité d'accès aux données spécifiques comme les informations de profil utilisateur.
+			\choice MongoDB pour gérer les flux d'activité des utilisateurs.
+		\end{checkboxes}
+		
+		\question[1] Sophia gère une plateforme de streaming vidéo où des millions d'utilisateurs regardent des vidéos en continu. Tous les jours, de nombreuses vidéos sont publiées sur la plateforme. Quelle base de données serait la plus appropriée pour gérer le catalogue de vidéos et les préférences des utilisateurs ?
+		\begin{checkboxes}
+			\choice Neo4j pour modéliser les relations entre les utilisateurs et les vidéos visionnées.
+			\choice Couchbase pour la gestion des vidéos et des métadonnées avec une bonne performance en lecture.
+			\CorrectChoice Cassandra pour gérer de très grandes quantités de données avec une haute disponibilité et une tolérance aux pannes.
+			\choice Google Bigtable pour gérer efficacement les métadonnées des vidéos.
+		\end{checkboxes}
+		
+		\question[1] Charlie a une application de jeu en ligne massivement multijoueur où des milliers de joueurs interagissent simultanément dans un monde virtuel. Quelle base de données NoSQL serait la plus adaptée pour gérer l'état du monde virtuel et les interactions des joueurs ?
+		\begin{checkboxes}
+			\choice Memcached pour la rapidité d'accès aux données spécifiques comme les scores des joueurs.
+			\choice Neo4j pour modéliser les relations entre les joueurs et les alliances.
+			\choice Cassandra pour gérer efficacement les données de connexion des joueurs.
+			\CorrectChoice Google Firestore pour stocker des entités de jeu complexes comme les personnages avec des attributs variés et évolutifs.
+		\end{checkboxes}
+		
+		\question[1] Jean développe une application de suivi de livraisons où les utilisateurs peuvent suivre en temps réel la localisation des colis et recevoir des mises à jour sur l'état de leurs commandes. Quelle base de données NoSQL serait la plus appropriée pour gérer ces informations en temps réel ?
+		\begin{checkboxes}
+			\CorrectChoice Amazon DynamoDB pour la rapidité d'accès aux informations spécifiques de suivi des colis et des commandes.
+			\choice CouchDB pour stocker les détails des commandes avec des informations de suivi mises à jour en temps réel.
+			\choice Amazon Neptune pour modéliser les itinéraires de livraison des colis.
+			\choice Cassandra pour gérer efficacement les statuts de livraison des colis.
+		\end{checkboxes}
+		
+		\question[1] Emma est en train de développer une plateforme de commerce électronique qui doit pouvoir traiter des milliards de commandes en une fraction de seconde, surtout lors des périodes de pointe comme les vacances. La redondance des données et la capacité à faire face à la perte de nœuds de stockage sont essentielles pour assurer une disponibilité continue du service. Quelle base de données NoSQL serait la plus adaptée pour répondre à ces exigences spécifiques ?
+		\begin{checkboxes}
+			\choice MongoDB pour sa flexibilité du schéma et sa capacité à gérer des données semi-structurées à grande échelle.
+			\choice Neo4j pour modéliser efficacement les relations entre les produits, les utilisateurs et les commandes.
+			\CorrectChoice Apache HBase pour sa capacité à gérer de vastes volumes de données non structurées avec une faible latence et une grande scalabilité.
+			\choice Riak pour sa capacité à offrir une haute disponibilité et une résilience élevée face aux pannes tout en gérant des données distribuées.
+		\end{checkboxes}
+		
+		\section*{Questions ouvertes}
+		
+		\setlength\linefillheight{.2in}
+		\question[5] Quels sont les principaux avantages des bases de données NoSQL par rapport aux bases de données relationnelles traditionnelles ?
+		
+		\fillwithlines{15cm}
+		
+		\begin{solution}
+			Les bases de données NoSQL offrent plusieurs avantages par rapport aux bases de données relationnelles traditionnelles, notamment une meilleure scalabilité horizontale, une flexibilité du schéma qui permet de gérer des données non structurées ou semi-structurées, et des performances améliorées pour certaines opérations. Elles sont particulièrement adaptées aux applications nécessitant un traitement rapide de grandes quantités de données distribuées sur plusieurs serveurs, telles que les réseaux sociaux, le Big Data, et les systèmes de gestion de contenu.
+		\end{solution}
+		
+		\question[5] En quoi MongoDB diffère-t-il de Cassandra ?
+		
+		\fillwithlines{15cm}
+		
+		\begin{solution}
+			Les bases de données document, comme MongoDB, stockent les données sous forme de documents JSON ou BSON, permettant une grande flexibilité et facilitant la manipulation des données complexes et imbriquées. En revanche, les bases de données orientées colonnes, comme Cassandra, organisent les données en colonnes plutôt qu'en lignes, ce qui permet une compression efficace et une lecture rapide des colonnes spécifiques, optimisant ainsi les requêtes analytiques massives. Chaque type de base de données est optimisé pour des cas d'utilisation différents et présente des avantages distincts en fonction des besoins de l'application.
+		\end{solution}
+		
+		\question[5] Quels sont les principaux défis associés à la gestion des bases de données NoSQL ?
+		
+		\fillwithlines{15cm}
+		
+		\begin{solution}
+			La gestion des bases de données NoSQL pose plusieurs défis, notamment la complexité de la modélisation des données sans schéma fixe, la nécessité de gérer la cohérence des données dans des environnements distribués, et les difficultés de mise en œuvre de transactions complexes. De plus, chaque type de base de données NoSQL a ses propres spécificités et limitations, nécessitant une expertise technique pour tirer pleinement parti de leurs capacités. Enfin, la sécurité des données et les stratégies de sauvegarde et de restauration peuvent également être plus complexes à mettre en œuvre que dans les bases de données relationnelles traditionnelles.
+		\end{solution}
+		
+		\question[5] Comment les bases de données graph, facilitent-elles l'analyse des relations complexes entre les données ? Citer un exemple de BDD graph.
+		
+		\fillwithlines{15cm}
+		
+		\begin{solution}
+			Les bases de données graph, comme Neo4j, sont conçues pour modéliser et interroger les relations complexes entre les données de manière naturelle et efficace. Elles utilisent des structures de graphes composées de nœuds (représentant les entités) et de relations (représentant les connexions entre les entités), avec des propriétés associées à chaque élément. Ce modèle permet d'exécuter des requêtes relationnelles complexes de manière rapide et intuitive, facilitant l'analyse des réseaux sociaux, les recommandations personnalisées, et d'autres applications nécessitant une exploration approfondie des connexions entre les données.
+		\end{solution}
+		
+		\bonusquestion[2] Dans quels scénarios est-il préférable d'utiliser une architecture hybride combinant bases de données SQL et NoSQL ?
+		
+		\fillwithlines{15cm}
+		
+		\begin{solution}
+			Une architecture hybride combinant bases de données SQL et NoSQL est préférable dans les scénarios où différentes parties de l'application ont des exigences de stockage et de requête distinctes. Par exemple, une application de commerce électronique peut utiliser une base de données relationnelle pour gérer les transactions financières et les informations des clients, assurant ainsi la cohérence et l'intégrité des données, tout en utilisant une base de données NoSQL pour stocker et analyser les données de navigation et les comportements des utilisateurs en temps réel. Cette approche permet de tirer parti des points forts de chaque type de base de données, optimisant ainsi les performances et la scalabilité de l'application.
+		\end{solution}
+		
+	\end{questions}
+	
+\end{document}
+
