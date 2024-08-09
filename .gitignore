@@ -303,5 +303,8 @@ TSWLatexianTemp*
 # error output from LaTeX
 *.err
 
+# LaTeX outputs
+build/
+
 # Mac OS X Finder files
 .DS_Store
