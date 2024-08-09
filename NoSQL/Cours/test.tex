@@ -1,0 +1,57 @@
+\documentclass{standalone}
+\usepackage{tikz}
+
+% Define the custom TikZ style for drawing file icons
+\tikzset{
+    file/.style={
+        % Default values for the dimensions and layout of the files
+        corner/.store in=\filecorner,
+        cornerradius/.store in=\filecornerradius,
+        lwidth/.store in=\filelwidth,
+        h/.store in=\fileh,
+        w/.store in=\filew,
+        nline/.store in=\filenline,
+        iconmargin/.store in=\fileiconmargin,
+        topmargin/.store in=\filetopmargin,
+        filenames/.store in=\filefilenames,
+        corner=0.15in,
+        cornerradius=0.02in,
+        lwidth=0.02in,
+        h=1.1in,
+        w=0.85in,
+        nline=10,
+        iconmargin=0.1in,
+        topmargin=0.3in,
+        filenames={},
+        % Draw the files
+        execute at begin picture={
+            \foreach[count=\i] \filename in \filefilenames {
+                \coordinate (nw) at ($(-0.05in*\i,-0.15in*\i)$);
+                \coordinate (ne0) at ($(nw) + (\filew, 0)$);
+                \coordinate (ne1) at ($(ne0) - (\filecorner, 0)$);
+                \coordinate (ne2) at ($(ne0) - (0, \filecorner)$);
+                \coordinate (se) at ($(ne0) + (0, -\fileh)$); 
+                \filldraw [-, line width = \filelwidth, fill=white] 
+                    (nw) -- (ne1) -- (ne2) [rounded corners=\filecornerradius]--(se) -- (nw|-se) -- cycle;
+                \draw [-, line width = \filelwidth] (ne1) [rounded corners=\filecornerradius]-- 
+                    (ne1|-ne2) -- (ne2);
+                \node [anchor=north west] at (nw) {\scriptsize \tt \filename};
+                \foreach \k in {1,...,\filenline} {
+                    \draw [-, line width = \filelwidth, line cap=round] 
+                        ($(nw|-se) + (\fileiconmargin,\fileiconmargin) + 
+                        (0,{(\k-1)/(\filenline-1)*(\fileh - \fileiconmargin - \filetopmargin)})$)
+                        -- ++ ($(\filew,0) - 2*(\fileiconmargin,0)$);
+                }
+            }
+        }
+    }
+}
+
+\begin{document}
+
+\begin{tikzpicture}
+    % Example usage of the file style with custom filenames
+    \pic[file, filenames={bar.c,bar.h,foo.c,foo.h}];
+\end{tikzpicture}
+
+\end{document}

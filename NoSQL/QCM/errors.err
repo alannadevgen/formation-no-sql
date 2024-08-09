@@ -1,0 +1,116 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex)
+ \write18 enabled.
+entering extended mode
+(./questionsC.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+(/usr/local/texlive/2024/texmf-dist/tex/latex/exam/exam.cls
+Document Class: exam 2023/07/09 Version 2.704 by Philip Hirschhorn
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/size10.clo))) (./package.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/sansmathfonts/sansmathfonts.sty
+
+Package sansmathfonts Warning: The [I] package option is only compatible with t
+he OT1 and U font encodings. To use the [I] option, please use the fontenc pack
+age with OT1 encoding: \usepackage[OT1]{fontenc} on input line 49.
+
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2024/texmf-dist/tex/generic/babel/txtbabel.def)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/babel-french/french.ldf)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/babel-english/english.ldf))
+(/usr/local/texlive/2024/texmf-dist/tex/generic/babel/locale/en/babel-english.t
+ex)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/babel/locale/fr/babel-french.te
+x) (/usr/local/texlive/2024/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/slantsc/slantsc.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/tex-gyre/tgbonum.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2024/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty)))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/tools/multicol.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/fancybox/fancybox.sty
+Style option: `fancybox' v1.4 <2010/05/15> (tvz)
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/wasysym/wasysym.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/parskip/parskip.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty)))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/lastpage/lastpage.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/lastpage/lastpage2e.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/lastpage/lastpagemodern.sty) 
+)) (/usr/local/texlive/2024/texmf-dist/tex/latex/sansmathfonts/t1xcmss.fd)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(build/questionsC.aux (build/titlepage.aux))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/sansmathfonts/omlcmssm.fd)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/sansmathfonts/omscmsssy.fd)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/sansmathfonts/omxcmssex.fd)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/sansmathfonts/uxcmss.fd)
+(/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(./titlepage.tex
+
+LaTeX Font Warning: Font shape `T1/xcmss/b/n' in size <10> not available
+(Font)              Font shape `T1/xcmss/bx/n' tried instead on input line 4.
+
+
+LaTeX Font Warning: Font shape `T1/xcmss/b/sc' in size <10> not available
+(Font)              Font shape `T1/xcmss/bx/sc' tried instead on input line 14.
+
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/wasysym/uwasy.fd) [1{/usr/local/t
+exlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/20
+24/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+(/usr/local/texlive/2024/texmf-dist/tex/latex/sansmathfonts/ot1cmsmf.fd)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/sansmathfonts/ussmsa.fd)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/sansmathfonts/ussmsb.fd))
+[2]
+
+LaTeX Font Warning: Font shape `T1/xcmss/b/n' in size <14.4> not available
+(Font)              Font shape `T1/xcmss/bx/n' tried instead on input line 17.
+
+[3]
+This exam contains 2 questions with 0 parts, 0 subparts, and 0 subsubparts.
+This exam has a total of 2 points.
+This exam has a total of 0 bonus points.
+
+Class exam Warning: Point totals have changed. Rerun to get point totals right.
+
+
+
+enddocument/afterlastpage: lastpage setting LastPage.
+(build/questionsC.aux (build/titlepage.aux))
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )</usr/local/texlive/2024/texmf-dist/fonts/type1/public/sansmathfonts/eczx1000
+.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsi1000.p
+fb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb
+></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb><
+/usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></u
+sr/local/texlive/2024/texmf-dist/fonts/type1/public/sansmathfonts/ssmsam10.pfb>
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/wasy-type1/wasy10.pfb>
+Output written on build/questionsC.pdf (3 pages, 95000 bytes).
+Transcript written on build/questionsC.log.
