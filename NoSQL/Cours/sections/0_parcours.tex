@@ -1,0 +1,47 @@
+\begin{frame}{Mon parcours académique}
+
+    \begin{tikzpicture}
+        \begin{scope}
+            \clip (0,0)  circle (2cm) ;
+            \node[anchor=center] (me) {\includegraphics[width=4cm]{img/alanna.jpg}} ; 
+        \end{scope}    
+        
+        % Position stid in the top-left corner of me
+        \node[xshift=5.5cm,yshift=3.5cm,anchor=south east] at (me.south east) (stid) {\includegraphics[width=4cm]{img/logos/logo-stid.jpg}};
+        \node[anchor=south,yshift=-0.2cm] at (stid.south) (stidtexte) {DUT STID en formation initiale};
+        \node[anchor=south,yshift=-0.4cm] at (stidtexte.south) (stage) {Stage RShiny au Cnam};
+        
+        % Position ensai below stid
+        \node[anchor=south,yshift=-3.5cm] at (stid.south) (ensai) {\includegraphics[width=4cm]{img/logos/logo-ensai.png}};
+        \node[anchor=south,yshift=-0.2cm] at (ensai.south) (ensaitexte) {École ingénieur ENSAI};
+        \node[anchor=south,yshift=-0.4cm] at (ensaitexte.south) {Filière Data Science et Data Engineering};
+        
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Mon parcours professionnel}
+    
+    \begin{tikzpicture}
+        \begin{scope}
+            \clip (0,0)  circle (2cm) ;
+            \node[anchor=center] (me) {\includegraphics[width=4cm]{img/alanna.jpg}} ; 
+        \end{scope}    
+        
+        % LBC
+        \node[xshift=3.5cm] at (me.east) (lbc) {\includegraphics[width=5cm]{img/logos/logo-littlebigcode.png}};
+        \node[anchor=south,yshift=-0.5cm] at (lbc.south) (stage) {Stage fin d'études};
+        \node[anchor=south,yshift=-0.4cm] at (stage.south) (poste) {Data Engineer depuis 1 an et demi};
+
+    \end{tikzpicture}
+
+
+\end{frame}
+
+
+\begin{frame}{Contact}
+
+Si vous avez des questions n'hésitez pas à me contacter :
+
+\href{mailto:alannadevlingenin@gmail.com}{alannadevlingenin@gmail.com}
+
+\end{frame}

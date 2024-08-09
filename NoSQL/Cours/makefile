@@ -16,7 +16,7 @@ all:
 
 # Cible pour nettoyer les fichiers auxiliaires
 clean:
-	rm -f $(OUTPUT_DIR)/*.aux $(OUTPUT_DIR)/*.log $(OUTPUT_DIR)/*.toc $(OUTPUT_DIR)/*.blg $(OUTPUT_DIR)/*.out $(OUTPUT_DIR)/*.bbl
+	rm -f $(OUTPUT_DIR)/*.aux $(OUTPUT_DIR)/*.log $(OUTPUT_DIR)/*.toc $(OUTPUT_DIR)/*.blg $(OUTPUT_DIR)/*.out $(OUTPUT_DIR)/*.bbl $(OUTPUT_DIR)/*.nav $(OUTPUT_DIR)/*.snm
 	rm -f $(OUTPUT_DIR)/*.synctex.gz
 
 
@@ -27,4 +27,3 @@ clean:
 	@echo '.........: pdflatex running pass 2...'
 	pdflatex -shell-escape -output-directory=$(OUTPUT_DIR) $< -o $@ 2>&1 | tee errors.err
 	@echo '.........: pdflatex run finished.'
-

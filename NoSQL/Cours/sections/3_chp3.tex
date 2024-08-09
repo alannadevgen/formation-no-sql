@@ -1,0 +1,193 @@
+\section{Concepts fondamentaux}
+
+% \begin{frame}{Caractéristiques principales du NoSQL}
+
+%     \begin{itemize}
+%         \item Schéma flexible
+%         \item Scalabilité
+%         \item Haute disponibilité
+%         \item Réplication
+%         \item Partitionnement
+%         \item Indexation
+%         \item Transactions
+%     \end{itemize}
+% \end{frame}
+
+% \begin{frame}{Schéma flexible}
+
+%     \begin{itemize}
+%         \item Schéma fixe : SQL
+%         \item Schéma flexible : NoSQL
+%     \end{itemize}
+
+% \end{frame}
+
+% \begin{frame}{Scalabilité}
+
+%     Scalabilité horizontale : Ajout de machines pour augmenter la capacité de stockage et de traitement
+
+%     Scalabilité verticale : Ajout de ressources (CPU, RAM, Disque) sur une machine existante
+
+% \end{frame}
+
+% \begin{frame}{Haute disponibilité}
+
+%     Garantir un service disponible en tout temps
+
+%     \begin{itemize}
+%         \item Réplication
+%         \item Partitionnement
+%         \item Tolérance aux pannes
+%     \end{itemize}
+
+% \end{frame}
+
+% \begin{frame}{Réplication}
+
+%     \begin{itemize}
+%         \item Réplication synchrone
+%         \item Réplication asynchrone
+%         \item Réplication multi-maître
+%     \end{itemize}
+
+% \end{frame}
+
+% \begin{frame}{Partitionnement}
+
+%     Partitionnement ou sharding : séparer les données en plusieurs chunks
+
+%     Faire diagramme avec les différentes stratégies de partitionnement
+
+%     \begin{itemize}
+%         \item Partitionnement par clé
+%         \item Partitionnement par plage
+%         \item Partitionnement par hachage
+%     \end{itemize}
+
+% \end{frame}
+
+\begin{frame}{Sharding (partitionnement horizontal)}
+
+    % \begin{tikzpicture}[line width=1pt]
+    %     \node[database,label=below:DB,database radius=1cm,database segment height=0.5cm] at (3,0) {};
+    % \end{tikzpicture}
+
+    \begin{tikzpicture}[line width=1pt]
+        \node[database,ultra thick,database radius=1cm,database segment height=0.5cm, database top segment={draw=black,fill=customgreen}, database middle segment={draw=black,fill=customgreen}, database bottom segment={draw=black,fill=customgreen}] at (0,0) {};
+        \node[database,ultra thick,database radius=1cm,database segment height=0.5cm, database top segment={draw=black,fill=customblue}, database middle segment={draw=black,fill=customblue}, database bottom segment={draw=black,fill=customblue}] at (3,0) {};
+        \node[database,ultra thick,database radius=1cm,database segment height=0.5cm, database top segment={draw=black,fill=customred}, database middle segment={draw=black,fill=customred}, database bottom segment={draw=black,fill=customred}] at (6,0) {};
+
+    \end{tikzpicture}
+
+\end{frame}
+
+\begin{frame}{Sharding (partitionnement horizontal)}
+
+    \begin{tikzpicture}[line width=1pt]
+        \node[database,ultra thick,database radius=1cm,database segment height=0.5cm, database top segment={draw=black,fill=customgreen}, database middle segment={draw=black,fill=customgreen}, database bottom segment={draw=black,fill=customgreen}] at (0,0) {};
+        \node[database,ultra thick,database radius=1cm,database segment height=0.5cm, database top segment={draw=black,fill=customblue}, database middle segment={draw=black,fill=customblue}, database bottom segment={draw=black,fill=customblue}] at (3,0) {};
+        \node[database,ultra thick,database radius=1cm,database segment height=0.5cm, database top segment={draw=black,fill=customred}, database middle segment={draw=black,fill=customred}, database bottom segment={draw=black,fill=customred}] at (6,0) {};
+
+        \node[database,ultra thick,database radius=1cm,database segment height=0.5cm, database top segment={draw=black,fill=customgreen}, database middle segment={draw=black,fill=customblue}, database bottom segment={draw=black,fill=customred}] at (3,-3) {};
+    \end{tikzpicture}
+
+    
+\end{frame}
+
+\begin{frame}{Round Robin}
+
+    \begin{tikzpicture}
+        
+        % Include the file stack icon
+        \node[anchor=south west,scale=0.6] at (0,0) {\filestack};
+        
+        \node[
+            database,ultra thick,database radius=1cm,database segment height=0.5cm, 
+            database top segment={draw=black,fill=customgreen}, 
+            database middle segment={draw=black,fill=customgreen}, 
+            database bottom segment={draw=black,fill=customgreen}
+        ] at (2,2) {};
+
+        \node[
+            disk,ultra thick,disk radius=1cm,disk segment height=0.5cm,
+        ] at (5,-2) {};
+    
+    \end{tikzpicture}
+    
+\end{frame}
+
+% \begin{frame}{Indexation}
+
+%     \begin{itemize}
+%         \item Indexation secondaire
+%         \item Indexation composite
+%         \item Indexation géospatiale
+%     \end{itemize}
+
+% \end{frame}
+
+
+% \begin{frame}{Avantages et inconvénients du NoSQL}
+
+% Avantages : Scalabilité, Flexibilité, Performances pour certaines charges de travail
+
+% Inconvénients : Complexité de gestion, Manque de standardisation, Consistance éventuelle (CAP Theorem)
+
+% \end{frame}
+
+
+% \begin{frame}{Théorème CAP}
+
+%     \begin{figure}[htb]
+%         \resizebox{0.85\textwidth}{!}{
+%         \begin{tikzpicture}        
+%             % Circle 1: Consistency
+%             \fill[pattern=north east lines, pattern color=customblue] (0,0) circle (3cm);
+%             \draw[very thick, color=customblue] (0,0) circle (3cm);
+%             \node[fill=customblue, text=white, font=\bfseries, rounded corners] at (0,0) {Consistency};
+        
+%             % Circle 2: Availability
+%             \fill[pattern=north east lines, pattern color=customred] (-2.5,-3.25) circle (3cm);
+%             \draw[very thick, color=customred] (-2.5,-3.25) circle (3cm);
+%             \node[fill=customred, text=white, font=\bfseries, rounded corners] at (-2.5,-3.25) {Availability};
+        
+%             % Circle 3: Partition Tolerance
+%             \fill[pattern=north east lines, pattern color=customgreen] (2.5,-3.25) circle (3cm);
+%             \draw[very thick, color=customgreen] (2.5,-3.25) circle (3cm);
+%             \node[fill=customgreen, text=white, font=\bfseries, rounded corners] at (2.5,-3.25) {Partition tolerance};
+            
+%             \onslide<2->{
+%             \node[inner sep=0pt] (unicorn) at (0,-2.5) {\includegraphics[width=1cm]{img/unicorn.png}};
+%             }
+%         \end{tikzpicture}
+%         }
+%     \end{figure}
+% \end{frame}
+
+
+% \begin{frame}{Théorème CAP}
+
+%     \begin{itemize}
+%         \item Consistency : Toutes les données sont à jour
+%         \item Availability : Toutes les requêtes reçoivent une réponse
+%         \item Partition tolerance : Le système continue de fonctionner malgré les partitions réseau
+%     \end{itemize}
+
+% \end{frame}
+
+% \begin{frame}{Cas d'usage des bases de données NoSQL}
+
+%     \begin{itemize}
+%         \item Applications web et mobiles
+%         \item Big Data et analytics
+%         \item Gestion de contenu et réseaux sociaux
+%         \item Internet des objets (IoT)
+%     \end{itemize}
+
+% \end{frame}
+
+% \begin{frame}[standout]
+    
+% Time for Kahoot!
+
+% \end{frame}
